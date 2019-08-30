@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            function
+        </title>
+    </head>
+    <body>
+        <h1>function Exercise</h1>
+        <h2>Basic</h2>
+        <script>
+            function printPlayers(){
+                var players = ['gerrard','hendo','robbo'];
+                var i = 0;
+                document.write('<ol>');
+                while(i<players.length){
+                    document.write('<li>' + players[i] + '</li>');
+                    i += 1;
+                }
+                document.write('</ol>');
+            }
+
+            printPlayers();
+        </script>
+
+        <h2>Parameter & Argument</h2>
+        <script>
+            function printPlayersByParam(pList){
+                var i = 0;
+                document.write('received arguments!');
+                document.write('<ol>');
+                while(i<players.length){
+                    document.write('<li>' + pList[i] + '</li>');
+                    i += 1;
+                }
+                document.write('</ol>');
+            }
+            var players = ['gerrard','hendo','robbo'];
+            printPlayersByParam(players);
+        </script>
+    </body>
+</html>

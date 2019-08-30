@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            object
+        </title>
+    </head>
+    <body>
+        <h1>
+            Object Exercise
+        </h1>
+
+        <h2>
+            create Object
+        </h2>
+        <script>
+            var captains = {
+                'liverpool':'hendo',
+                'chelsea':'azpilicueta',
+                'manCity':'Silva',
+            };
+
+            document.write(captains.liverpool);
+        </script>
+
+        <h2>
+            Iterate
+        </h2>
+        <script>
+            for(var key in captains){
+                document.write(key+ ' captain is '+ captains[key] +'<br>');
+            }
+        </script>
+
+        <h2>
+            property & method
+        </h2>
+        <script>
+            captains.showAll = function(){
+                for(var team in this){
+                    if(typeof(this[team]) == "function"){
+                        // prevent browser from printing function as well
+                    }
+                    else{
+                    document.write(team + ' captain is '+ this[team] +'<br>');
+                    }
+                }
+            }
+
+            captains.showAll();
+        </script>
+
+
+    </body>
+</html>
